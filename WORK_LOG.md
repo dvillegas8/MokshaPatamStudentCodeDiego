@@ -1,9 +1,10 @@
 Name: YOUR NAME HERE
 
-| Date    |  Time  |                                     Update |
-|:--------|:------:|-------------------------------------------:|
-| April 5 | 9-10pm | I tried to write abstract, efficient code. |
-|         |        |                                            |
+| Date        |     Time     |                                                                                                                                                                                                                                                                                                             Update |
+|:------------|:------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| September 2 | 12:30 - 1:00 |                                                      Thinking about how to approach this problem, looking through the problems to see how many rolls I need for each one, I came up with an idea to see which ladder gives us the most movement to reach the end faster, wrote a function to find the ladder above |
+| September 2 | 1:00 - 1:30  |                                     Stuck on what to do next, got an idea about creating a function that calculates how many rolls you need to get to the destination, confused on how to implement snakes into my function, finished the amount of rolls you need. However, I still need to test if my code works |
+| September 2 | 6:00 - 6:30  | Working on main function and decided to use a while loop for this problem set, confused on what to do next, thinking about changing the get first ladder function into a function that finds the next ladder if there is any available, worked on the main function, still confused on how to implement the snakes |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
