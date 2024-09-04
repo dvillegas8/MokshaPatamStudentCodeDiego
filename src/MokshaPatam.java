@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * Moksha Patam
  * A puzzle created by Zach Blick
@@ -17,8 +20,11 @@ public class MokshaPatam {
     public static int fewestMoves(int boardsize, int[][] ladders, int[][] snakes) {
         int min_rolls = 0;
         int placement = 0;
+        Integer spot = Integer.valueOf(0);
         int ladder = getLadderLocation(ladders, placement);
         int ladder_location = 0;
+        int numRolls = 0;
+        int diceRoll = 1;
         // Get the coordinate of the ladder we need to get to
         ladder_location = ladders[ladder][0];
         min_rolls += getMinRolls(ladder_location);
@@ -35,6 +41,26 @@ public class MokshaPatam {
             else{
 
             }
+        }
+        // Breadth-First-search
+        // Check to see if you have been at a certain location
+        // Data structure to see how many steps it takes to get to the node (array, list) and also to see if you habe been there
+        Queue queue = new LinkedList<Integer>();
+        queue.add(1);
+        int[] boardNumbers = new int[boardsize];
+        // Fill all boardNumbers with -1 so show that we haven't explored it yet
+        for(int i = 0; i < boardsize; i++){
+            boardNumbers[i] = -1;
+        }
+        // Breadth-First_Search, continue while queue isn't empty
+        while(!queue.isEmpty()){
+            // Cast into Integer because it is returning an object
+            spot = (Integer) queue.remove();
+            // Once we reach the end of the board we are done
+            if(spot == boardsize){
+                return numRolls;
+            }
+
         }
 
         return 0;
