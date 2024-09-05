@@ -52,6 +52,23 @@ public class MokshaPatam {
         for(int i = 0; i < boardsize; i++){
             boardNumbers[i] = -1;
         }
+        // Keep track of which board numbers we have visited
+        boolean[] visitedNumbers = new boolean[boardsize];
+        // Array of ladders where the index is the starting square and value is ending square
+        int[] secondLadders = new int[boardsize];
+        for(int i = 0; i < boardsize; i++){
+            for(int j = 0; j < ladders.length; j++){
+                // Check to see if index of secondLadders matches with starting square of ladders
+                if(i == ladders[j][0]){
+                    secondLadders[i] = ladders[j][1];
+                }
+            }
+            // If secondLadders at index is empty, set it to -1 to show it is not a ladder
+            if(secondLadders[i] == 0){
+                secondLadders[i] = -1;
+            }
+        }
+
         // Breadth-First_Search, continue while queue isn't empty
         while(!queue.isEmpty()){
             // Cast into Integer because it is returning an object
@@ -60,7 +77,18 @@ public class MokshaPatam {
             if(spot == boardsize){
                 return numRolls;
             }
-
+            // For loop to check all edges for each dice roll
+            for(int i = 0; i < 6; i++){
+                // Check each edge to see if they are unvisited
+                if(!visitedNumbers[spot + diceRoll]){
+                    // Add to queue if they are unvisited
+                    queue.add(spot + diceRoll);
+                    // Update status
+                    visitedNumbers[spot + diceRoll] = true;
+                }
+                diceRoll++;
+            }
+            diceRoll = 1;
         }
 
         return 0;

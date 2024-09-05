@@ -6,6 +6,7 @@ Name: YOUR NAME HERE
 | September 2   |  1:00 - 1:30  |                                     Stuck on what to do next, got an idea about creating a function that calculates how many rolls you need to get to the destination, confused on how to implement snakes into my function, finished the amount of rolls you need. However, I still need to test if my code works |
 | September 2   |  6:00 - 6:30  | Working on main function and decided to use a while loop for this problem set, confused on what to do next, thinking about changing the get first ladder function into a function that finds the next ladder if there is any available, worked on the main function, still confused on how to implement the snakes |
 | September 3-4 | 11:50P- 12:20 |                                                                                                                                                                  Creating variables like queues and arrays, looking through the lecture notes and writing down pseudocode, turned some of the pseudocode into code |
-
+| September 4   | 11:00 - 12:00 |                                                 Thinking about how to check if we had visited a certain number already, made an array of booleans to do that but I think there is a more efficient way to do this, added the array of ladders mentioned in the lecture notes, added some code to the main function |
+    
 
 To add a new row to the table, click into a cell and then hit shift-enter.
