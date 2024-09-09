@@ -40,9 +40,6 @@ public class MokshaPatam {
             // For loop to check all nodes for each dice roll
             for (int diceRoll = 1; diceRoll < 7; diceRoll++) {
                 node = currentNode + diceRoll;
-                if (node == boardsize) {
-                    return numRolls[currentNode - 1] + 1;
-                }
                 // Check if the node is a snake or ladder
                 if (snakesAndLadders[node] != 0) {
                     node = snakesAndLadders[node];
